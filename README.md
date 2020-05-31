@@ -4,3 +4,4 @@ entry point : app.js
 
 run : node app.js
 
+*install node modules*
