@@ -35,6 +35,7 @@ table.table-bordered > tbody > tr > td{
   <table class="table table-hover table-bordered table-striped">
     <thead style="color:green">
       <tr>
+      	<th>ID(click on id for more details)</th>
         <th>BUYER</th>
         <th>STATION</th>
         <th>SHIPMENT</th>
@@ -47,28 +48,34 @@ table.table-bordered > tbody > tr > td{
 
  <tbody>
    
- <% datas.forEach(function(data) { %>
+ <% datas.forEach(function(trade) { %>
+   
  <tr  class="success">
+ 	<td>
+ 	<a href="/trade/<%= trade.id %>">
+ 		<center><%= trade.id %></center>
+ 	</a>
+ 	</td>
   <td>
-    <%= data.buyer %>
+    <%= trade.buyer %>
 </td>
  <td>
-     <%= data.station %>
+     <%= trade.station %>
  </td>
    <td>
-      <%= data.shipment %>
+      <%= trade.shipment %>
     </td>
     <td>
-      <%= data.type %>
+      <%= trade.type %>
     </td>
     <td>
-      <%= data.rate %>&#8377;/Candy
+      <%= trade.rate %>&#8377;/Candy
     </td>
     <td>
-      <%= data.quantity %>Candy
+      <%= trade.quantity %>Candy
     </td>
     <td>
-      <%= data.quality %>
+      <%= trade.quality %>
     </td>
     <br>
 </tr>
